@@ -1405,8 +1405,31 @@
   }
 }
 
+.status__content__text:lang(mn-Mong) {
+  writing-mode: vertical-lr;
+  max-height: 209px; // roughly above 500 characters
+
+  // stretch contents, detect overflow
+  overflow: hidden;
+  width: 100%;
+}
+
+.detailed-status .status__content:has(.status__content__text:lang(mn-Mong)) {
+  overflow-x: scroll;
+  scrollbar-gutter: stable;
+}
+
+.detailed-status .status__content__text:lang(mn-Mong) {
+  min-height: 165px; // roughly above 500 characters
+  max-height: 495px;
+}
+
 .status__content.status__content--collapsed {
   max-height: 22px * 15; // 15 lines is roughly above 500 characters
+}
+
+.status__content.status__content--collapsed:has(.status__content__text:lang(mn-Mong)) {
+  max-width: calc(100% - mod(100%, 22px));
 }
 
 .status__content__read-more-button,

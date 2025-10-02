@@ -131,11 +131,12 @@ class StatusContent extends PureComponent {
 
     if (status.get('collapsed', null) === null && onCollapsedToggle) {
       const { collapsible, onClick } = this.props;
+      const text = node.querySelector('.status__content__text');
 
       const collapsed =
           collapsible
           && onClick
-          && node.clientHeight > MAX_HEIGHT
+          && (node.clientHeight > MAX_HEIGHT || (text !== null && text.scrollWidth > text.clientWidth))
           && status.get('spoiler_text').length === 0;
 
       onCollapsedToggle(collapsed);
