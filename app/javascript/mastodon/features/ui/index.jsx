@@ -100,6 +100,8 @@ const mapStateToProps = state => ({
   username: state.getIn(['accounts', me, 'username']),
 });
 
+let isVerticalUI = true;
+
 class SwitchingColumnsArea extends PureComponent {
   static propTypes = {
     identity: identityContextPropShape,
@@ -586,7 +588,7 @@ class UI extends PureComponent {
 
     return (
       <Hotkeys global handlers={handlers}>
-        <div className={classNames('ui', { 'is-composing': isComposing })} ref={this.setRef}>
+        <div className={classNames('ui', { 'is-composing': isComposing }, { 'vertical-ui': isVerticalUI })} ref={this.setRef}>
           <SwitchingColumnsArea identity={this.props.identity} location={location} singleColumn={layout === 'mobile' || layout === 'single-column'} forceOnboarding={firstLaunch && newAccount}>
             {children}
           </SwitchingColumnsArea>

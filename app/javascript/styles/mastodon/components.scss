@@ -11592,3 +11592,72 @@ noscript {
     }
   }
 }
+
+/*** Vertical UI ***/
+
+.vertical-ui.ui {
+  writing-mode: vertical-rl;
+  justify-content: center;
+}
+
+.vertical-ui .columns-area__panels__pane.columns-area__panels__pane--compositional {
+  display: none;
+}
+
+.vertical-ui .navigation-panel__legal,
+.vertical-ui .navigation-panel__compose-button,
+.vertical-ui .navigation-panel .navigation-bar {
+  display: unset !important;
+}
+
+.vertical-ui .scrollable {
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+
+.vertical-ui .columns-area__panels {
+  /* reset */
+  min-height: auto;
+
+  max-width: 1170px;
+}
+
+.vertical-ui .columns-area__panels__pane {
+  /* reset */
+  height: auto;
+  min-width: auto;
+
+  width: 100%;
+  min-height: 285px;
+}
+
+.vertical-ui .columns-area__panels__pane__inner {
+  width: 100%;
+  height: 285px;
+}
+
+.vertical-ui .columns-area__panels__main {
+  /* reset */
+  width: auto;
+
+  max-height: 600px;
+  max-width: none;
+  height: 100%;
+}
+
+.vertical-ui .compose-panel {
+  width: calc(100% - 10px);
+  height: 285px;
+  margin-right: 10px;
+}
+
+.vertical-ui .natigation-panel {
+  /* reset */
+  margin-top: 0;
+  margin-bottom: 0;
+  height: auto;
+
+  margin-left: 10px;
+  margin-right: 10px;
+  width: calc(100% - 20px);
+}
