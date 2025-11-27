@@ -2828,6 +2828,7 @@ __metadata:
     stylelint: "npm:^16.19.1"
     stylelint-config-prettier-scss: "npm:^1.0.0"
     stylelint-config-standard-scss: "npm:^16.0.0"
+    stylelint-plugin-logical-css: "npm:^1.2.3"
     substring-trie: "npm:^1.0.2"
     tesseract.js: "npm:^6.0.0"
     tiny-queue: "npm:^0.2.1"
@@ -12956,6 +12957,15 @@ __metadata:
   peerDependencies:
     stylelint: ^16.23.0
   checksum: 10c0/70a9862a2cedcc2a1807bd92fc91c40877270cf8a39576b91ae056d6de51d3b68104b26f71056ff22461b4319e9ec988d009abf10ead513b2ec15569d82e865a
+  languageName: node
+  linkType: hard
+
+"stylelint-plugin-logical-css@npm:^1.2.3":
+  version: 1.2.3
+  resolution: "stylelint-plugin-logical-css@npm:1.2.3"
+  peerDependencies:
+    stylelint: ^14.0.0 || ^15.0.0 || ^16.0.0
+  checksum: 10c0/d0ffd76edf56cc948fcee378a01dced8057a4093a5dc70f850cc76da03063bcafd6f044d3973bae97df02264e2f4cb024e52493e97039647b4ef7a826c8dbdba
   languageName: node
   linkType: hard
 

@@ -1,5 +1,6 @@
 module.exports = {
   extends: ['stylelint-config-standard-scss', 'stylelint-config-prettier-scss'],
+  plugins: ['stylelint-plugin-logical-css'],
   ignoreFiles: [
     'app/javascript/styles/mastodon/reset.scss',
     'coverage/**/*',
@@ -28,6 +29,9 @@ module.exports = {
 
     'scss/dollar-variable-empty-line-before': null,
     'scss/no-global-function-names': null,
+
+    'plugin/use-logical-properties-and-values': [true, { 'severity': 'warning' }],
+    'plugin/use-logical-units': [true, { 'severity': 'warning' }],
   },
   overrides: [
     {
